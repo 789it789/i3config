@@ -111,6 +111,9 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace $workspace10
+assign [class = "Terminator"] $workspace1
+assign [class = "Firefox"] $workspace2
+assign [class = "Kodi"] $workspace10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -145,10 +148,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always feh --bg-scale /home/chase/Pictures/wallpapers-filter-random-backgrounds-iamfreeman-fabric-room-black-high-113528.jpg
+exec_always feh --bg-scale /home/chase/Pictures/m.jpg
 exec nitrogen --restore
 
-bindsym Control+$mod+l exec i3lock --color "$bg-color"
+bindsym Control+$mod+l exec "sudo lock"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 2%+ && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1)"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 2%- && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1)"
 bindsym XF86AudioMute exec --no-startup-id "amixer set Master toggle && if amixer get Master | grep -Fq '[off]'; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1); fi"
@@ -187,7 +190,7 @@ bar {
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
   position top
-  font pango:Caviar Dreams Display 8
+  font pango:Caviar-Dreams Display 8
 }
 
 
@@ -197,3 +200,6 @@ bindsym $mod+d exec rofi -show run ﻿
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# To auto mount USB's
+exec --no-startup-id "devmon --no-gui"

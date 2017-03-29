@@ -112,7 +112,7 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
-assign [class = "Firefox"] $workspace2
+assign [class = "firefox-nightly"] $workspace2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -147,7 +147,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always feh --bg-scale /home/chase/rbd.jpg
+exec_always feh --bg-scale /home/chase/Pictures/lamboedit.png
 
 bindsym Control+$mod+l exec "sudo lock"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 2%+ && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1)"

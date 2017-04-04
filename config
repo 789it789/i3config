@@ -168,3 +168,6 @@ bindsym $mod+d exec rofi -show run ﻿
 
 # To auto mount USB's
 exec --no-startup-id "devmon --no-gui"
+
+# scrot & gimp
+bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'

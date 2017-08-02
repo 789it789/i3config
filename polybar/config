@@ -45,7 +45,7 @@ font-2 = sm4tik:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = mpd weather
+modules-right = spotipy weather
 
 tray-position =hidden
 tray-padding = 11
@@ -410,3 +410,10 @@ margin-bottom = 5
 ;label = %percentage_used%%
 
 ; vim:ft=dosini
+
+[module/spotipy]
+type = custom/script
+exec =  python3 ~/.config/polybar/spoti.py
+exec-if = pgrep spotify > /dev/null
+interval = 0.01
+click-left = playerctl -p spotify play-pause

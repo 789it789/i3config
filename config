@@ -171,3 +171,8 @@ exec --no-startup-id "devmon --no-gui"
 
 # scrot & gimp
 bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
+
+bindsym $mod+f exec pcmanfm
+bindsym $mod+b exec firefox-nightly
+bindsym $mod+n exec terminology --geometry 81x20 --role floating_term --hold -e neofetch --config ~/.config/neofetch/config.conf
+        for_window [window_role=floating_term] floating enable

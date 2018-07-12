@@ -1,0 +1,147 @@
+:root {
+
+  --color-dark: #222;
+  --color-lite: #3e3e3e;
+  --color-text: var(--color-dark);
+}
+
+h1 {
+	font-family: 'Helvetica';
+	font-size: 100px;
+	color: var(--color-dark);
+	margin-top: 5px;
+	cursor: default;
+}
+
+html, body {
+	margin: 0px;
+	background-color: var(--color-dark);
+}
+
+div#whatdididowrongwithmylife {
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+div#links {
+	width: 1200px;
+	margin: auto auto;
+}
+
+div#links div#basic, div#links div#chans {
+	height: 350px;
+	width: 47%;
+	background-color: var(--color-lite);
+	display: inline-block;
+	margin: 0px 10px;
+	overflow: hidden;
+}
+
+div#links div#basic div#mail {
+	padding: 30px;
+	background-color: var(--color-dark);
+	width: 200px;
+}
+
+div#links div#basic div#mail i {
+	color: var(--color-lite);
+	font-size: 45px;
+	transition: .5s opacity;
+	letter-spacing: 5px;
+}
+
+div#links div#basic div#mail i:hover {
+	opacity: .8;
+}
+
+div#links div#basic div#misc {
+	padding: 30px;
+	background-color: var(--color-dark);
+	width: 200px;
+	position: absolute;
+	bottom: 164px;
+	left: 225px;
+}
+
+div#links div#basic div#misc i {
+	color: var(--color-lite);
+	font-size: 55px;
+	transition: .5s opacity;
+	letter-spacing: 5px;
+}
+
+div#links div#basic div#misc i:hover {
+	opacity: .8;
+}
+
+div#links div#chans ul {
+	margin-top: 43px;
+}
+
+div#links div#chans ul a {
+	text-decoration: none;
+}
+
+div#links div#chans ul a li {
+	color: var(--color-lite);
+	background-color: var(--color-text);
+	padding: 15px;
+	width: 450px;
+	text-decoration: none;
+	margin-bottom: 5px;
+	transition: .5s background-color, .5s color;
+	font-family: 'Helvetica';
+    text-align:center;
+}
+
+a {
+	outline: none;
+}
+
+div#links div#chans ul a li:hover {
+	background-color: var(--color-lite);
+	color: var(--color-dark);
+}
+
+div#links div#chans ul a li span {
+	color: var(--color-text);
+	opacity: .6;
+}
+
+.search {
+	width: 1123px;
+	height: 50px;
+	margin-right: 0px;
+	margin-top: 20px;
+	padding: 5px;
+	background: var(--color-lite);
+	font-family: "Helvetica";
+	font-size: 30px;
+	letter-spacing: 0.5px;
+	color: var(--color-dark);
+	border: none;
+	border-left: 20px solid var(--color-lite);
+}
+
+.search:focus {
+	outline: none;
+}
+
+div#searchbox {
+	width: 1300px;
+	border-radius: 5px;
+	position: relative;
+	margin: 0 auto;
+}
+
+::-moz-placeholder
+   color:    var(--color-text);
+   opacity:  1;
+}
+
+body {
+       -moz-user-select: none; 
+}

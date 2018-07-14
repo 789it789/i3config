@@ -11,7 +11,7 @@
 
 /* URL VARIABLES */
 --url-background: var(--bg-light); --url-color: var(--fg-dark);
---url-height: 23px; --url-right-margin: 5px;
+--url-height: 23px; --url-right-margin: -8px;
 --url-fonts: "Open Sans Light", "Sans Regular", "Sans Regular",monospace,"Sans Regular"; --url-font-size: 12pt;
 --url-text-align: center;
 --url-position: absolute; 
@@ -62,7 +62,7 @@ position: absolute !important; top: 0 !important; left: 0 !important;
 }
 #urlbar {
 border: none !important; border-radius: 0 !important;
-margin: 0 0 0 0 !important; padding: 0 2px 0 9px !important;
+margin: 0 0 0 0 !important; padding: 2px 0 9px !important;
 height: var(--url-height) !important; min-height: var(--url-height) !important;
 background: var(--url-background) !important; color: var(--url-color) !important;
 font-family: var(--url-fonts) !important; font-size: var(--url-font-size) !important;
@@ -118,7 +118,7 @@ margin: 0px /* 1px */ !important;
 .tabbrowser-tab[selected="true"] .tab-stack {
 background: var(--bg-light) !important; color: var(--fg-light) !important;
 border-radius: 0px !important; position: relative !important; margin: 0px /* 1px */ !important;
-border-top: 1px solid #8c8c8c !important;
+border-top: 2px solid #8c8c8c !important;
 }
 .tabbrowser-tab[selected="true"]:before { /* Left Triangle (of selected tab) */
 display: var(--tab-triangle); content: '' !important; position: absolute !important; z-index: 2 !important;
@@ -161,7 +161,6 @@ background: var(--bg-dark) !important;
 #liberator-separator { height: 3px !important; background: var(--bg-light) !important; }
 
 /* MENUS */
-menuitem + menuseparator, menu + menuseparator, .menu-iconic-left  { display: none !important; }
 menuitem > label { margin-left: var(--tab-height) !important; }
 menubar, menubutton, menulist, menu, menuitem {
 font-family: var(--tab-fonts) !important; font-size: var(--tab-font-size);

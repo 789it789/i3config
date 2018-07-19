@@ -1,5 +1,4 @@
 :root {
-
   --color-dark: #222;
   --color-lite: #3e3e3e;
   --color-text: var(--color-dark);
@@ -82,7 +81,7 @@ div#links div#chans ul {
 }
 
 div#links div#chans ul a {
-	text-decoration: none;
+	text-decoration: none;e/e/
 }
 
 div#links div#chans ul a li {
@@ -95,6 +94,7 @@ div#links div#chans ul a li {
 	transition: .5s background-color, .5s color;
 	font-family: 'Helvetica';
     text-align:center;
+    letter-spacing: 3px;
 }
 
 a {
@@ -124,6 +124,7 @@ div#links div#chans ul a li span {
 	color: var(--color-dark);
 	border: none;
 	border-left: 20px solid var(--color-lite);
+    letter-spacing: 3px;
 }
 
 .search:focus {
@@ -137,11 +138,26 @@ div#searchbox {
 	margin: 0 auto;
 }
 
-::-moz-placeholder
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color:    var(--color-text);
+   opacity:  1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+   color:    var(--color-text);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+   color:    var(--color-text);
+   opacity:  1;
+}
+:-moz-placeholder { /* Firefox 18- */
    color:    var(--color-text);
    opacity:  1;
 }
 
 body {
-       -moz-user-select: none; 
+     -webkit-user-select: none; /* Safari */        
+     -moz-user-select: none; /* Firefox */
+     -ms-user-select: none; /* IE10+/Edge */
+     user-select: none; /* Standard */
 }

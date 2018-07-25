@@ -8,7 +8,7 @@ font pango:System San Francisco Display 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec roxterm
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -44,7 +44,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+#bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -96,7 +96,7 @@ bindsym $mod+Shift+7 move container to workspace $workspace7
 bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
-assign [class = "firefox-nightly"] $workspace2
+assign [class = "waterfox"] $workspace2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -131,13 +131,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always feh --bg-scale /home/chase/Pictures/lamboedit.png
+exec_always feh --bg-scale /home/chase/wallpaper.png
 
 bindsym Control+$mod+l exec "sudo lock"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 2%+ && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1)"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 2%- && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1)"
 bindsym XF86AudioMute exec --no-startup-id "amixer set Master toggle && if amixer get Master | grep -Fq '[off]'; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1); fi"
-exec_always xrandr -s 1920x1080
+exec_always xrandr -s 1366x768
 exec_always xcompmgr -c -f -n
 bindsym XF86AudioPrev exec mpc prev & playerctl previous
 bindsym XF86AudioNext exec mpc next & playerctl next
@@ -170,9 +170,7 @@ bindsym $mod+d exec rofi -show run ﻿
 exec --no-startup-id "devmon --no-gui"
 
 # scrot & gimp
-bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym Print exec xfce4-screenshooter
 
-bindsym $mod+f exec pcmanfm
-bindsym $mod+b exec firefox-nightly
-bindsym $mod+n exec terminology --geometry 81x20 --role floating_term --hold -e neofetch --config ~/.config/neofetch/config.conf
-        for_window [window_role=floating_term] floating enable
+bindsym $mod+f exec thunar
+bindsym $mod+b exec waterfox

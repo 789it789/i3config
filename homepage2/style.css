@@ -1,0 +1,124 @@
+:root {
+    --color-dark: #222;
+    --color-lite: #3e3e3e;
+    --color-third: #a4a4a4;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-dark);
+    user-select: none; /* Prevent text selection */
+    display: flex; /* Use flexbox to center the main container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;     
+}
+
+#links ul {
+    list-style: none;
+    padding: 10px;
+    text-align: left; /* Align items left */
+    display: flex;
+}
+
+#links ul a {
+    text-decoration: none;
+    color: var(--color-lite);
+    display: block; /* Makes entire area clickable */
+    padding: 15px; /* Padding inside the border */
+    transition: background-color 0.3s;
+    border: 2px solid var(--color-lite); /* Border around links */
+    border-radius: 3px; /* Rounded corners */
+}
+
+#links ul a:hover {
+    background-color: var(--color-lite); /* Hover effect */
+    color: var(--color-dark);
+}
+
+/* Added margin for horizontal spacing */
+#links ul li {
+    margin-right: 10px; /* Adjust this value for more/less space */
+}
+
+#basic {
+    background-color: var(--color-lite);
+    padding: 15px;
+    border-radius: 5px;
+    overflow: hidden; /* Prevents overflow */
+    display: flex;
+    justify-content: center; /* Centering content */
+    align-items: center; /* Center vertically */
+}
+
+h1 {
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    margin: 0;
+    max-width: 100%; /* Prevent overflow */
+    text-overflow: ellipsis; /* Ellipsis for overflowing text */
+    white-space: nowrap; /* Prevent line break */
+}
+
+#searchbox {
+    margin: 20px 0;
+    width: 100%; /* Full width */
+}
+
+.search {
+    width: 90%; /* Adjust width for longer search box */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background: var(--color-lite);
+    color: var(--color-third);
+}
+
+.search:focus {
+    outline: none;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    #links {
+        flex-direction: row; /* Horizontal layout for larger screens */
+        justify-content: center;
+    }
+
+    #basic {
+        margin: 20px;
+    }
+
+    #links {
+        text-align: center; /* Center text on larger screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .search {
+        font-size: 16px; /* Smaller font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 8vw; /* Smaller heading size for mobile */
+    }
+}
